@@ -1,0 +1,16 @@
+title Part 0 (0.5 and 0.6) diagramme SPA
+
+User->Browser: Click on the link
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+Server->Browser: HTML-code
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Server->Browser: main.css
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+Server->Browser: main.js
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server->Browser: [{ content: "HTML is easy", date: "2023-04-18" }, ...]
+Browser->User: view of the APP
+User->Browser: Write a message and save it
+Browser->Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+Server->Browser: [{ content: "HTML is easy", date: "2023-04-18" },{ content: "new message", date: "2023-04-18" }, ...]
+Browser->User: view of the APP with new message (no page refresh)
